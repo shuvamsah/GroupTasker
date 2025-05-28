@@ -1,9 +1,18 @@
 <h1>Task List</h1>
-<ul>
+
+<ul style="list-style: none; padding: 0;">
   {{#each tasks}}
-    <li>
-      <strong>{{name}}</strong> - Status: {{status}}
+    <li style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <strong>{{name}}</strong> – Status: {{status}}<br/>
+      <a href="/task-detail/{{this.id}}"
+         style="margin-top: 5px; display: inline-block; padding: 6px 12px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">
+        View Details
+      </a>
     </li>
   {{/each}}
 </ul>
-<a href="/create-task">Create New Task</a>
+
+<a href="/create-task"
+   style="display: inline-block; padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">
+  Create New Task
+</a>
