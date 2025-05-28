@@ -1,0 +1,9 @@
+<h1>Task List</h1>
+<ul>
+  {{#each tasks}}
+    <li>
+      <strong>{{name}}</strong> - Status: {{status}}
+    </li>
+  {{/each}}
+</ul>
+<a href="/create-task">Create New Task</a>

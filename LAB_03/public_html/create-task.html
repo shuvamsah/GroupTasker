@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Task</title>
+</head>
+<body>
+  <h1>Create a New Task</h1>
+  <form action="/submit-task" method="POST">
+    <label for="task">Task Name:</label><br>
+    <input type="text" id="task" name="task" required><br><br>
+    
+    <button type="submit">Create Task</button>
+    <button type="button" onclick="window.location.href='/tasks'">Cancel</button>
+  </form>
+</body>
+</html>

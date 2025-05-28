@@ -1,0 +1,19 @@
+<h1>Task Detail</h1>
+
+<div style="max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+  <h2 style="margin-top: 0;">{{task.name}}</h2>
+  <p><strong>ID:</strong> {{task.id}}</p>
+  <p><strong>Description:</strong> {{task.description}}</p>
+
+  <div style="margin-top: 20px;">
+    <a href="/tasks" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; margin-right: 10px;">
+      Back to Task List
+    </a>
+    <a href="/edit-task/{{task.id}}" style="padding: 10px 20px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; margin-right: 10px;">
+      Edit Task
+    </a>
+    <a href="/delete-task/{{task.id}}" style="padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 4px;">
+      Delete Task
+    </a>
+  </div>
+</div>

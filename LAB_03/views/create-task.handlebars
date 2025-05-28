@@ -1,0 +1,35 @@
+<h1>Create New Task</h1>
+
+<form action="/create-task" method="POST" style="max-width: 500px; margin: auto;">
+  <div style="margin-bottom: 15px;">
+    <label for="taskName" style="font-weight: bold;">Task Name:</label>
+    <input
+      type="text"
+      id="taskName"
+      name="taskName"
+      placeholder="Enter task name"
+      required
+      style="width: 100%; padding: 8px; box-sizing: border-box;"
+    />
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="taskDesc" style="font-weight: bold;">Task Description:</label>
+    <textarea
+      id="taskDesc"
+      name="taskDesc"
+      rows="5"
+      placeholder="Enter task description"
+      style="width: 100%; padding: 8px; box-sizing: border-box;"
+    ></textarea>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+      Create Task
+    </button>
+    <a href="/tasks" style="padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; display: inline-block; text-align: center;">
+      Cancel
+    </a>
+  </div>
+</form>
