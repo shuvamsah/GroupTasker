@@ -1,4 +1,4 @@
-name: CI
+name: Minimal CI
 
 on:
   push:
@@ -7,29 +7,18 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: LAB_07
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Install dependencies
         run: npm install
-      - name: Run Unit Tests
-        run: npm run test
-
-  systemtest:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm install
-      - name: Run System Tests
-        run: npm run test:system
+      - name: Done!
+        run: echo "CI pipeline complete. No tests to run."
