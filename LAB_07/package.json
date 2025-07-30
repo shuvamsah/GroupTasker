@@ -18,3 +18,8 @@
     "supertest": "^7.1.3"
   }
 }
+"scripts": {
+  "test": "jest",
+  "test:system": "jest"
+}
+
